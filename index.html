@@ -12,8 +12,10 @@
 <body>
     <div class="weather-app">
     <header>
-        <form class="search-form">
-            <input type="search" placeholder="Enter city name..." required class="search-form-input"/>
+        <form class="search-form" id="search-form">
+            <input type="search"
+            placeholder="Enter city name..."
+            required id ="search-input" class="search-form-input"/>
             <input type="submit" value="Search" class="search-form-button"/>
         </form>
     </header>
@@ -21,7 +23,7 @@
     <main>
         <div class="weather-app-data">
         <div>
-        <h1 class="weather-app-city">Paris</h1>
+        <h1 class="weather-app-city" id="city">Paris</h1>
         <p class="weather-app-description">Tuesday 10:00, scattered clouds
             <br/>
             Humdity: <strong>60%</strong>, Wind: <strong>5 km/h</strong>
@@ -38,6 +40,7 @@
         is <a href="https://shuduhadi.github.io/weather-app/" target="_blank"> open-sourced on Github</a> and 
     <a href="https://swnweather1.netlify.app/" target="_blank"> hosted on Netlify</a>
     </footer>
+    <script src="src/index.js"></script>
     </div>
 </body>
 </html>
