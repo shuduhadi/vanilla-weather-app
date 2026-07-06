@@ -7,9 +7,12 @@ function displayWeatherCondition(response) {
     let windSpeed = document.querySelector("#wind-speed");
     let time = document.querySelector("#time");
     let date = new Date(response.data.time * 1000);
+    let icon = document.querySelector("#icon");
 
+    console.log(response.data.condition.icon);
 
     time.innerHTML = formatDate(date);
+    icon.innerHTML= `<img class="weather-app-icon" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png"/>`;
     city.innerHTML = response.data.city;
     description.innerHTML = response.data.condition.description;
     humidity.innerHTML = `${response.data.temperature.humidity}%`;
